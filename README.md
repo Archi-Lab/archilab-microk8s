@@ -49,3 +49,27 @@ Execute on the master:
 ```
 microk8s.enable dashboard dns istio
 ```
+
+## Bash autocompletion
+
+Create aliases:
+
+```
+echo "alias kubectl='microk8s.kubectl'" >> ~/.bash_aliases
+```
+
+Activate autocompletion:
+
+```
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+source ~/.bashrc
+```
+
+## Namespace creation
+
+Copy all YAML files in `namespaces` folder to the master and execute for each
+file:
+
+```
+kubectl create -f ./<namespace>.yaml
+```
