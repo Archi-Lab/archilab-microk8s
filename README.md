@@ -60,9 +60,8 @@ sudo snap alias microk8s.kubectl kubectl
 
 ## Namespace creation
 
-Copy all YAML files in `namespaces` folder to the master and execute for each
-file:
+Copy `namespaces` folder to the master and execute:
 
 ```
-kubectl create -f ./<namespace>.yaml
+kubectl create -f ./namespaces
 ```
