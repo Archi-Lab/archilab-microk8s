@@ -5,7 +5,7 @@
 Install MicroK8s on master and all nodes:
 
 ```
-snap install microk8s --classic
+sudo snap install microk8s --classic --channel=1.16/stable
 ```
 
 Add user to group:
@@ -47,22 +47,15 @@ microk8s.join <master>:<port>/<token>
 Execute on the master:
 
 ```
-microk8s.enable dashboard dns istio
+microk8s.enable dashboard dns istio storage
 ```
 
-## Bash autocompletion
+## Kubectl alias
 
-Create aliases:
-
-```
-echo "alias kubectl='microk8s.kubectl'" >> ~/.bash_aliases
-```
-
-Activate autocompletion:
+Create alias for microk8s.kubectl:
 
 ```
-echo "source <(kubectl completion bash)" >> ~/.bashrc
-source ~/.bashrc
+sudo snap alias microk8s.kubectl kubectl
 ```
 
 ## Namespace creation
