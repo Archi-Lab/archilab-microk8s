@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: archilab
   labels:
-    istio-injection: enabled
+    istio-injection: disabled
