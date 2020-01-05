@@ -5,7 +5,7 @@
 Install MicroK8s on master and all nodes:
 
 ```
-sudo snap install microk8s --classic --channel=1.16/stable
+sudo snap install microk8s --classic --channel=1.17/stable
 ```
 
 Add user to group:
@@ -47,7 +47,7 @@ microk8s.join <master>:<port>/<token>
 Execute on the master:
 
 ```
-microk8s.enable dashboard dns istio storage
+microk8s.enable dashboard dns ingress istio metallb storage
 ```
 
 ## Kubectl alias
